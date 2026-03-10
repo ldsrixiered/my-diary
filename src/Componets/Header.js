@@ -1,4 +1,5 @@
 import React from 'react'
+import './Header.css'
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -20,22 +21,42 @@ const header = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+
+      {/* here is the nav bar background */}
+      <AppBar position="static" sx={{ backgroundColor:"#4D5061"}}> 
         <Toolbar>
+
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{ mr: 5 }}
           >
+
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Rixie
+            Virtual Assitance Phenommenon
           </Typography>
-          <Button color="inherit"> {home} </Button>
-          <Button color="inherit">{about}</Button>
+
+          <Button sx={{
+            color: '#fff',
+            '&:hover': {backgroundColor: 'white',
+            color:'#4D5061'
+            } 
+            }}
+            > 
+            {home} 
+          </Button>
+          <Button sx={{
+            color: '#fff',
+            '&:hover': {background: 'white',
+            color: '#4D5061'
+            }
+          }}
+          >{about}
+          </Button>
           <Button color="inherit"> {skills} </Button>
           <Button color="inherit"> {contact} </Button>
         </Toolbar>
