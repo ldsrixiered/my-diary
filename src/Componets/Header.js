@@ -49,6 +49,7 @@ const header = () => {
             > 
             {home} 
           </Button>
+
           <Button sx={{
             color: '#fff',
             '&:hover': {background: 'white',
@@ -57,8 +58,20 @@ const header = () => {
           }}
           >{about}
           </Button>
-          <Button color="inherit"> {skills} </Button>
-          <Button color="inherit"> {contact} </Button>
+
+          <Button sx={{
+            color:'#fff',
+            '&:hover': {background: 'white',
+              color:'#4D5061'
+            }
+          }}> {skills} </Button>
+
+          <Button sx={{
+            color:'#fff',
+            '&:hover': {background: 'white',
+              color:'#4D5061'
+            }
+          }}> {contact} </Button>
         </Toolbar>
       </AppBar>
     </Box>
