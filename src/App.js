@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import './App.css';
 import Header from './Componets/Header';
 import Footer from './Componets/Footer';
@@ -8,16 +9,14 @@ import '@fontsource/roboto/700.css';
 
 
 function App() {
-  const first_name = "Rixie Red";
-  const last_name = "Castro";
-  const age = 29
 
+  const [num, setNum] = useState(1);
   return (
     <div className="App">
       <Header/>
       <main>
-        <h1>hello world </h1>
-        <p>hi my name is {first_name} {last_name} and I am {age}</p>
+        <h1>Virtual Assistance Phenomenon {num}</h1>
+        <button onClick = {() => setNum(num + 1)}>next-</button>
       </main>
       <Footer/>
     </div>
