@@ -9,14 +9,17 @@ import '@fontsource/roboto/700.css';
 
 
 function App() {
-
-  const [num, setNum] = useState(1);
+  const emp = ['Joan', 'Irine', 'Shane Salas', 'Jonathan', 'kim']
+  const [num, setNum] = useState(0);
+  const nextEmployee = () => {
+    setNum((num + 1) % emp.length); // loops back to start
+  };
   return (
     <div className="App">
       <Header/>
       <main>
-        <h1>Virtual Assistance Phenomenon {num}</h1>
-        <button onClick = {() => setNum(num + 1)}>next-</button>
+        <h1>Virtual Assistance Phenomenon VA {emp[num]}</h1>
+        <button onClick={nextEmployee}> Next Employee </button>
       </main>
       <Footer/>
     </div>
