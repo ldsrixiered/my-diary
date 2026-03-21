@@ -10,6 +10,7 @@ import '@fontsource/roboto/700.css';
 function App() {
 
   const [num, setNum] = useState(1);
+  const [username, setUsername] = useState('')
 
 
   return (
@@ -25,6 +26,17 @@ function App() {
 {/* 
         here is the other one  */}
         <button onClick={() => setNum(currentNum => currentNum + 2)}>add</button>
+
+        <h2>Selected Va {username}</h2>
+        <input
+          type='text'
+          placeholder='enter your name'
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+
+        ></input>
+
+
 
       </main>
 
