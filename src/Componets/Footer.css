@@ -4,3 +4,8 @@ footer{
     text-align: center;
     align-items: center;
 }
+
+footer p{
+    align-items: center;
+    justify-content: center;
+}

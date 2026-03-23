@@ -12,12 +12,22 @@ function App() {
   const [num, setNum] = useState(1);
   const [username, setUsername] = useState('Aya')
 
+  const [name, setName] = useState("");
+  const [submittedName, setSubmittedName] = useState("");
+
+
 
   return (
     <div>
       <Header />
       
       <main>
+
+
+        <input 
+  type="text"
+  onChange={(e) => setName(e.target.value)}
+/>
 
         <h1>Hello world {num}</h1>
         <button onClick={() => setNum(num + 1)}>next -- </button>
