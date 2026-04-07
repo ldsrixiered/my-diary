@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Header from './Componets/Header';
 import Footer from './Componets/Footer';
+import Navbar from './Componets/Navbar';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div>
+      <Navbar />
       <Header />
       
       <main>
